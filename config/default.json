@@ -1,6 +1,6 @@
 {
   "jwtPrivateKey": "unsecureKey",
-  "db": "mongodb://localhost/vidly",
+  "db": "mongodb://admin:pass@host.docker.internal/vidly?authSource=admin",
   "port": "3900",
   "requiresAuth": false
 }

@@ -1,4 +1,4 @@
 {
   "jwtPrivateKey": "1234",
-  "db": "mongodb://localhost/vidly_tests"
+  "db": "mongodb://admin:pass@host.docker.internal/vidly_tests?authSource=admin"
 }
