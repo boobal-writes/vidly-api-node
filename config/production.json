@@ -1,0 +1,6 @@
+{
+  "db": "mongodb+srv://vidlyuser:1234@cluster0.lird6.mongodb.net/vidly?retryWrites=true&w=majority",
+  "jwtPrivateKey": "unsecureKey",
+  "port": "80",
+  "requiresAuth": false
+}
