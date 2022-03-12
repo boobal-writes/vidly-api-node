@@ -1,6 +1,5 @@
 .DS_Store
 node_modules/
 logfile.log
-infra/db/data
-infra/db/database
+infra/db/mongo-db-data
 .batect

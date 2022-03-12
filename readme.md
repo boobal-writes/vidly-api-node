@@ -12,35 +12,37 @@ This is the implementation of Vidly in Node.js.
 
 Make sure to follow all these steps exactly as explained below. Do not miss any steps or you won't be able to run this application.
 
-### Install MongoDB
+### Start MongoDB
+    
+    cd infra/db
+    batect run-mongo-db
 
-To run this project, you need to install the latest version of MongoDB Community Edition first.
-
-https://docs.mongodb.com/manual/installation/
-
-Once you install MongoDB, make sure it's running.
+### Start Mongo Express
+    
+    cd infra/db
+    batect run-mongo-express
 
 ### Install the Dependencies
 
 Next, from the project folder, install the dependencies:
 
-    npm i
+    batect install
 
 ### Populate the Database
 
-    node seed.js
+    batect populate-db
 
 ### Run the Tests
 
 You're almost done! Run the tests to make sure everything is working:
 
-    npm test
+    batect test
 
 All tests should pass.
 
 ### Start the Server
 
-    node index.js
+    batect start
 
 This will launch the Node server on port 3900. If that port is busy, you can set a different point in config/default.json.
 

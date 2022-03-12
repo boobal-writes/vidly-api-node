@@ -2,7 +2,7 @@ containers:
   mongodb:
     image: mongo:3.6.23
     volumes:
-      - local: ./database
+      - local: ./mongo-db-data
         container: /data/db
     environment:
       MONGO_INITDB_ROOT_USERNAME: admin
@@ -20,14 +20,13 @@ containers:
       ME_CONFIG_MONGODB_SERVER: host.docker.internal
     ports:
       - '8081:8081'
-    volumes: 
-      - ./data:/data/db      
 tasks:
-  run-db:
-    description: Initialize DB
+  run-mongo-db:
+    description: Start Mongo DB
     run: 
       container: mongodb
-  run-express:
+  run-mongo-express:
+    description: Start Mongo Express
     run:
       container: mongo-express
 
